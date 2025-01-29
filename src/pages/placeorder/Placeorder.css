@@ -1,0 +1,158 @@
+:root {
+    --primary-color: #ff6f61;
+    --secondary-color: #333;
+    --light-gray: #f9f9f9;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #555;
+    --hover-color: #e05547;
+  }
+  
+  /* Container */
+  .placeorder {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Left Section (Form) */
+  .place-order-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .place-order-left .title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+  }
+
+  .submit{
+    padding: 1.23rem;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+
+  }
+  
+  /* Input Fields */
+  .placeorder input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .placeorder input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+  }
+  
+  /* Multi-field (For side-by-side inputs) */
+  .multi-field {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .multi-field input {
+    flex: 1;
+  }
+  
+  /* Right Section (Order Summary) */
+  /* Order Summary Container */
+.place-order-right {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Order Summary Title */
+  .order-summary-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+  }
+  
+  /* Order Details */
+  .order-summary-details {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    background: var(--light-gray);
+    margin-bottom: 20px;
+  }
+  
+  .order-summary-details p {
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  .order-summary-details p strong {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ff6f61;
+  }
+  
+  /* Proceed to Payment Button */
+  .order-summary-button {
+    background: linear-gradient(90deg, #ff6f61, #ff9461);
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 111, 97, 0.3);
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .order-summary-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 111, 97, 0.5);
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .placeorder {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .multi-field {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .place-order-right {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  
