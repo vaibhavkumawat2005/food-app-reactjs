@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Placeorder.css";
+import { StoreContext } from "../../context/Storecontext";
 
 const Placeorder = () => {
+
+  const {getTotalCartAmount} = useContext(StoreContext)
   return (
     <form className="placeorder">
       {/* Left Section - Delivery Form */}
@@ -27,15 +30,27 @@ const Placeorder = () => {
 
    
       <div className="place-order-right">
-  <h3 className="order-summary-title">Order Summary</h3>
-  
-  <div className="order-summary-details">
-    <p><span>Items:</span> 3</p>
-    <p><span>Total Price:</span> <strong>$45.99</strong></p>
+      <h2>Cart Total</h2>
+          <div>
+            <div className="cart-total-details">
+              <span>Subtotal</span>
+              <span>${getTotalCartAmount()}</span>
+            </div>
+            <div className="cart-total-details">
+              <span>Delivery Fee</span>
+              <span>$2.00</span>
+            </div>
+            <div className="cart-total-details total-amount">
+              <strong>Total</strong>
+              <strong>${(getTotalCartAmount() + 2).toFixed(2)}</strong>
+            </div>
+            <button className="order-summary-button">
+              Proceed to Payment
+            </button>
+          </div>
+ 
+ 
   </div>
-  
-  <button className="order-summary-button">Proceed to Payment</button>
-</div>
 
     </form>
   );
